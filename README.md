@@ -5,15 +5,26 @@ services. See [boot-new](https://github.com/boot-clj/boot-new).
 
 ## Usage
 
-Install the template into your local maven repository:
+Install a snapshot of the template into your local maven repository:
 
     boot build
 
 Then create a project based on the template:
 
-    boot -d seancorfield/boot-new new -t web-service -n <name>
+    boot -d seancorfield/boot-new new -t web-service -n <name> -a <port> -S
 
-Replace the name of your application in kebab-case for `<name>`.
+Here `-S` indicates using the snapshot version. Replace the name of your
+application in kebab-case for `<name>` and the TCP port for `<port>`, e.g.
+
+    boot -d seancorfield/boot-new new -t web-service -n hello-world -a 8001 -S
+
+This creates a functional Boot project. Executing the `run` task starts a server
+listening on the specified port with endpoints:
+
+- `/version` Returns the version.
+- `/api-docs` Renders the Swagger API specification.
+- `/swagger.json` Returns the raw Swagger API specification.
+
 
 ## License
 
