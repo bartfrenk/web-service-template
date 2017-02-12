@@ -1,2 +1,2 @@
 {:server {:host "localhost"
-          :port 5000}}
+          :port {{port}}}}

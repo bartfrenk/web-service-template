@@ -13,11 +13,12 @@
 
 (defn web-service
   "Creates a minimal web service."
-  [name]
+  [name port]
   (let [ns name
         data {:name name
               :path (b/name-to-path name)
               :ns ns
+              :port port
               :label (make-label name)}]
     (println "Creating web service:" name)
     (b/->files data
