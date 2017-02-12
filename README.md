@@ -12,7 +12,7 @@ Then create a project based on the template by running:
 
     boot -d seancorfield/boot-new new -t web-service -n <name>
 
-Replace the name of your application in kebab-case for <name>.
+Replace the name of your application in kebab-case for `<name>`.
 
 ## License
 
