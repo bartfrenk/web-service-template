@@ -18,7 +18,7 @@ application in kebab-case for `<name>` and the TCP port for `<port>`, e.g.
 
     boot -d seancorfield/boot-new new -t web-service -n hello-world -a 8001 -S
 
-This creates a functional Boot project. Executing the `run` task starts a server
+This creates a functional Boot project. Executing its `run` task starts a server
 listening on the specified port with endpoints:
 
 - `/version` Returns the version.
