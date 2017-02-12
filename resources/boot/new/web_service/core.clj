@@ -44,9 +44,7 @@
 
 (defn -main [& args]
   (init-logging :info)
-  (log/infof "Starting {{name}} %s" version)
+  (log/infof "Starting {{name}} version %s" version)
   (add-shutdown-hook mount/stop)
   (mount/start)
   (keep-alive))
-
-
