@@ -1,8 +1,8 @@
-(ns boot.new.lemonpi-service
+(ns boot.new.web-service
   (:require [clojure.string :as str]
             [boot.new.templates :as b]))
 
-(def render (b/renderer "lemonpi-service"))
+(def render (b/renderer "web-service"))
 
 (defn make-label
   "Capitalize every word in a string"
@@ -11,8 +11,8 @@
        (map str/capitalize)
        (str/join " ")))
 
-(defn lemonpi-service
-  "Creates a minimal LemonPI service."
+(defn web-service
+  "Creates a minimal web service."
   [name]
   (let [ns name
         data {:name name
